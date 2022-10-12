@@ -1,0 +1,63 @@
+Shell command :
+ssh -i "labsuser.pem" ubuntu@ IPv4 address here
+
+ Configure git :
+git config --global user.name “boblitster”
+
+git config --global user.email bob.litster@gmail.com
+
+git config --global -l
+
+create a folder: 
+mkdir lab2
+
+Working with GIT:
+git init   this creates a hidden directory 
+ls -la      allows you to view the directory and files you have just created
+
+Create a new file:
+touch lab2.txt 
+
+add this file to your git repo:
+	git add lab2.txt
+	git status
+
+save your changes: (using the commit command)
+	git commit -m “initial commit”
+
+see what has been done: 
+git log
+
+Connecting your GIT HUB to your AWS instance 
+1)	generating a new pair of SSH keys:
+ssh-keygen
+2)	view the key that has been created
+cat ~/.ssh/id_rsa.pub
+This is the public key:
+ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLOCPRDHqo8dmb8FpxJgHRKnuY/3SySKBeZBaJ74WAWWXu+wiknJwjmlRnTPJyv2ZqKZNj4Nt9GMIT9rkclh2CXiKijgMdvCE6QjoOlIDyGmps3eo0HFKPrBIB4gpiKYPiT8uPmKnNBigTPenz3PlOWJSz2rb4uxfvQoCk8xgUjWXyahWyXShJJ/XfVX/V48Zwb7oc5HOBDKKdwQ1jeiTEplDuHd2pr1BR8fALwr7ie+uImERkaK8WWWZ6P2spAB1c6J9U+Q7IL5TAdk7op68SQbitBK4wQYyBu6ywLneHYKvJmVWb9U/dcmIoweT8WjmQtdCKMUw9M7RBBU/wOmnh ubuntu@ip-172-31-17-20
+
+
+
+3)	Copy this key into your git hub account (settings / new ssh key / add key)
+
+
+
+
+Using Nano 
+nano lab2.txt		
+ctrl O enter (adds text)
+ctrl X (exits nano)	
+
+Putting the text onto your gitHub
+git add lab2.txt
+(git status)
+git commit -m “add some text”
+(git status)
+(git log)
+git push 
+Then go back to your git hub repo and refresh to check the changes you have made 
+
+Running the SwitchMenu in java via the EC2 instance
+javac SwitchOperatedTextMenu.java 
+ 
+java SwitchOperatedTextMenu 
